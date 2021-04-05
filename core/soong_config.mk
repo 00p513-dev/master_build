@@ -262,8 +262,6 @@ $(call add_json_bool, SelinuxIgnoreNeverallows, $(filter true,$(SELINUX_IGNORE_N
 
 $(call add_json_bool, SepolicySplit, $(filter true,$(PRODUCT_SEPOLICY_SPLIT)))
 
-include vendor/stormbreaker/build/soong/soong_config.mk
-
 $(call json_end)
 
 $(file >$(SOONG_VARIABLES).tmp,$(json_contents))
